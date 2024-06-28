@@ -1,5 +1,20 @@
 @import url('https://fonts.cdnfonts.com/css/bebas-neue');
 @import url('https://fonts.cdnfonts.com/css/poppins');
+
+.hero-1 {
+  --url: url('../images/hero/lagoon.png');
+  background-image: var(--url);
+}
+.hero-2 {
+  --url: url('../images/hero/mountain.png');
+  background-image: var(--url);
+}
+.hero-3 {
+  --url: url('../images/hero/field.png');
+  background-image: var(--url);
+}
+
+
 /* 1200 x 780 */
 body{
     margin: 0;
