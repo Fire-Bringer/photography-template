@@ -29,7 +29,7 @@
   background-image: image-url('landscape/landscape10.jpeg');
 }
 .wrapper {
-	width: 900px;
+	width: 80%;
 	min-height: auto;
 	margin: 20px auto;
 }
@@ -43,15 +43,15 @@
 	clear: both;
 }
 .wrapper ul li {
-	width: calc(30% - 5px);
+	width: calc(40% - 5px);
 	margin: 30px 15px 0;
-	height: 150px;
+	height: 400px;
 	background-size: cover;
 	background-position: center center;
 	float: left;
 	box-shadow: 0 15px 10px 1px rgba(0, 0, 0, 0.5);
 }
-.wrapper ul li:nth-child(1n + 4) {
+.wrapper ul li:nth-child(1n + 5) {
 	max-height: 0;
 	opacity: 0;
 	transition: 0.2s ease-in;
@@ -74,7 +74,7 @@
 .wrapper #btnBox {
 	display: none;
 }
-.wrapper #btnBox:checked~ul li:nth-child(1n + 4) {
+.wrapper #btnBox:checked~ul li:nth-child(1n + 5) {
 	max-height: 1000px;
 	opacity: 1;
 	transition: 0.2s ease-in;
