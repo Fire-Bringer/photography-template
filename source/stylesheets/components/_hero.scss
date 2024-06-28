@@ -31,8 +31,9 @@ svg{
     color: #fff;
 }
 :root{
-    --width-default: min(1200px, 1820px);
+    --width-default: min(1200px, 90vw);
     --diameter: 1432px;
+    --min-slider-width: min(1000px, 100vw);
 }
 .logo img{
     width: 50px;
@@ -199,7 +200,7 @@ header{
     position: absolute;
     content: '';
     bottom: 0;
-    width: min(1000px, 1920px);
+    width: var(--min-slider-width);
     height: 70%;
     left: 50%;
     transform: translateX(-50%);
