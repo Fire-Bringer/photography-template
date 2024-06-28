@@ -1,0 +1,45 @@
+.about-container{
+  color: #eee;
+  padding: 5rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.about-card{
+  width: 90%;
+  display: flex;
+  padding: 5rem 0;
+}
+.about-text{
+  padding: 0 5rem;
+  width: 50%;
+}
+.about-img-box{
+  padding: 0 5rem;
+  width: 50%;
+  display: flex;
+  justify-content: center;
+}
+.about-image{
+  width: 25rem;
+  height: auto;
+}
+
+@media screen and (max-width: 768px){
+  .about-card{
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+  .reverse{
+    flex-direction: column;
+  }
+  .about-text{
+    padding: 1rem 5rem;
+    width: 100%;
+  }
+}
+@media screen and (max-width: 426px){
+  .about-text {
+    padding: 1rem 0;
+  }
+}
