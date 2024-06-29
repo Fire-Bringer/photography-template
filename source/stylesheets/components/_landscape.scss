@@ -81,7 +81,7 @@
 .wrapper #btnBox:checked~ul li:nth-child(1n + 5) {
 	max-height: 1000px;
 	opacity: 1;
-	transition: 0.2s ease-in;
+	transition: 2s ease-in;
 }
 .wrapper #btnBox:checked~.btn-area .btn2 {
 	display: block;
