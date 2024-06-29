@@ -56,7 +56,7 @@
 }
 .main_logo{
   width: 4rem;
-  height: auto;
+  height: 4rem;
   border-radius: 50%;
   border: 2px solid white;
   box-shadow: 2px 2px #000;
@@ -84,8 +84,9 @@
   }
 }
 @media (max-width: 768px) {
-  .shop_logo {
+  .main_logo {
     width: 3rem;
+    height: 3rem;
   }
   #menu-icon {
     display: block;
