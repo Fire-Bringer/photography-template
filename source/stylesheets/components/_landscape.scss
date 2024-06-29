@@ -36,6 +36,9 @@
 .wrapper ul {
 	list-style: none;
 	padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 .wrapper ul:after {
 	content: '';
@@ -45,11 +48,12 @@
 .wrapper ul li {
 	width: calc(40% - 5px);
 	margin: 30px 15px 0;
-	height: 400px;
+	height: 25rem;
 	background-size: cover;
 	background-position: center center;
 	float: left;
 	box-shadow: 0 15px 10px 1px rgba(0, 0, 0, 0.5);
+  border-radius: 1rem;
 }
 .wrapper ul li:nth-child(1n + 5) {
 	max-height: 0;
@@ -84,4 +88,47 @@
 }
 .wrapper #btnBox:checked~.btn-area .btn1 {
 	display: none;
+}
+
+@media screen and (max-width: 1440px){
+  .wrapper ul li {
+    height: 20rem;
+  }
+}
+@media screen and (max-width: 1200px){
+  .wrapper ul li {
+    height: 16rem;
+  }
+}
+@media screen and (max-width: 1024px){
+  .wrapper ul li {
+    height: 14rem;
+  }
+}
+@media screen and (max-width: 768px){
+  .wrapper ul {
+    flex-direction: column;
+    align-items: center;
+  }
+  .wrapper ul li {
+    height: 23rem;
+    width: 100%;
+  }
+}
+@media screen and (max-width: 426px){
+  .wrapper ul {
+    flex-wrap: unset;
+  }
+  .wrapper ul li {
+    height: 14rem;
+  }
+}
+@media screen and (max-width: 321px){
+  .box {
+    width: 160px;
+    height: 240px;
+  }
+  .wrapper ul li {
+    height: 11rem;
+  }
 }

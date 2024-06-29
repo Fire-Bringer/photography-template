@@ -48,7 +48,7 @@
   width: 100%;
   height: 100%;
   transition: 0.5s;
-  border-radius: 15px;
+  border-radius: 1rem;
   border: 4px double rgb(0, 0, 0);
 }
 
@@ -57,18 +57,29 @@ img:hover{
 
 }
 
-@media screen and (max-width: 1200px){
+@media screen and (max-width: 1440px){
   .box span{
     transform: rotateY(calc(var(--i) * 36deg)) translateZ(400px);
   }
 }
-@media screen and (max-width: 991px){
+@media screen and (max-width: 1200px){
   .box span{
-    transform: rotateY(calc(var(--i) * 36deg)) translateZ(375px);
+    transform: rotateY(calc(var(--i) * 36deg)) translateZ(350px);
+  }
+}
+@media screen and (max-width: 1024px){
+  .box span{
+    transform: rotateY(calc(var(--i) * 36deg)) translateZ(320px);
   }
 }
 @media screen and (max-width: 768px){
   .box span{
-    transform: rotateY(calc(var(--i) * 36deg)) translateZ(320px);
+    transform: rotateY(calc(var(--i) * 36deg)) translateZ(300px);
+  }
+}
+@media screen and (max-width: 426px){
+  .box {
+    width: 180px;
+    height: 270px;
   }
 }
