@@ -78,3 +78,8 @@ img:hover{
     transform: rotateY(calc(var(--i) * 36deg)) translateZ(310px);
   }
 }
+@media screen and (max-width: 426px){
+  .portrait-container {
+    min-height: 90vh;
+  }
+}
