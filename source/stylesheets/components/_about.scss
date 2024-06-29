@@ -42,7 +42,6 @@
   .about-card{
     flex-direction: column-reverse;
     align-items: center;
-    padding: 2rem 0;
   }
   .reverse{
     flex-direction: column;
@@ -67,13 +66,19 @@
 }
 @media screen and (max-width: 426px){
   .about-text {
-    padding: 2rem 3rem;
+    padding: 1rem 2rem;
   }
   .about-image {
     width: 15rem;
   }
   .about-img-box {
     width: 22rem;
+  }
+  .about-card{
+    padding: 0;
+  }
+  .about-container {
+    padding: 5rem 1rem 0 1rem;
   }
 }
 @media screen and (max-width: 376px){

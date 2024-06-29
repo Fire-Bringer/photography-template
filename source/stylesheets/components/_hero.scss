@@ -242,3 +242,8 @@ header{
         font-size: small;
     }
 }
+@media all and (max-width: 426px) {
+  .slider {
+    height: 80vh;
+  }
+}
