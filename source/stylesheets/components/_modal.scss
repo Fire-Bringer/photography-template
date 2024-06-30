@@ -133,3 +133,28 @@
   object-fit: contain;
   opacity: 0;
 }
+
+@media screen and (max-width: 768px){
+  .popup{
+    height: 70vh;
+  }
+  .index{
+    font-size: 50px;
+  }
+}
+@media screen and (max-width: 576px){
+  .popup{
+    width: 90%;
+  }
+  .index{
+    font-size: 30px;
+  }
+}
+@media screen and (max-width: 426px){
+  .index{
+    font-size: 50px;
+  }
+  .arrow-img{
+    width: 1.2rem;
+  }
+}
