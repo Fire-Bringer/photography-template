@@ -1,0 +1,39 @@
+- name: landscape-photo1
+  description: Landscape Image
+  image: landscape/landscape1.jpeg
+
+- name: landscape-photo2
+  description: Landscape Image
+  image: landscape/landscape2.jpeg
+
+- name: landscape-photo3
+  description: Landscape Image
+  image: landscape/landscape3.jpeg
+
+- name: landscape-photo4
+  description: Landscape Image
+  image: landscape/landscape4.jpeg
+
+- name: landscape-photo5
+  description: Landscape Image
+  image: landscape/landscape5.jpeg
+
+- name: landscape-photo6
+  description: Landscape Image
+  image: landscape/landscape6.jpeg
+
+- name: landscape-photo7
+  description: Landscape Image
+  image: landscape/landscape7.jpeg
+
+- name: landscape-photo8
+  description: Landscape Image
+  image: landscape/landscape8.jpeg
+
+- name: landscape-photo9
+  description: Landscape Image
+  image: landscape/landscape9.jpeg
+
+- name: landscape-photo10
+  description: Landscape Image
+  image: landscape/landscape10.jpeg

@@ -1,15 +1,27 @@
 <div id="Landscapes" class="wrapper">
   <input id="btnBox" type="checkbox">
   <ul class="tab">
-    <li class="animation-show" id="landscape-photo1"></li>
-    <li class="animation-show" id="landscape-photo2"></li>
-    <li class="animation-show" id="landscape-photo3"></li>
-    <li class="animation-show" id="landscape-photo4"></li>
-    <li class="animation-show" id="landscape-photo5"></li>
-    <li class="animation-show" id="landscape-photo6"></li>
-    <li class="animation-show" id="landscape-photo7"></li>
-    <li class="animation-show" id="landscape-photo8"></li>
-    <li class="animation-show" id="landscape-photo9"></li>
-    <li class="animation-show" id="landscape-photo10"></li>
+    <% data.landscapes.each do |landscape| %>
+      <li class="animation-show image" id=<%= landscape.name %>></li>
+
+      <!-- popup -->
+      <div class="popup">
+          <!-- top bar -->
+          <div class="top-bar">
+              <p class="image-name"><%= landscape.name %></p>
+              <span class="close-btn"></span>
+          </div>
+          <!-- arrows -->
+          <button class="arrow-btn left-arrow"><%= image_tag "arrow.png", alt:"" %></button>
+          <button class="arrow-btn right-arrow"><%= image_tag "arrow.png", alt:"" %></button>
+          <!-- image -->
+          <%= image_tag landscape.image, class:'large-image', alt:'' %>
+
+          <!-- image-index -->
+          <h1 class="index">01</h1>
+
+      </div>
+
+    <% end %>
   </ul><label class="btn-area" for="btnBox"><span class="btn1">LOAD MORE</span> <span class="btn2">LOAD LESS</span></label>
 </div>
