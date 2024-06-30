@@ -7,26 +7,52 @@ document.addEventListener('DOMContentLoaded', function() {
   let nextBtn = document.getElementById('next');
   let lastPosition = items.length - 1;
   let firstPosition = 0;
+
+  // Config Param
+  let countItem = items.length;
   let active = 0;
 
   nextBtn.onclick = () => {
       active = active + 1;
+      if(active >= countItem){
+        active = 0;
+      }
       setSlider();
   }
   prevBtn.onclick = () => {
       active = active - 1;
+      if(active < 0){
+        active = countItem - 1;
+      }
       setSlider();
   }
+
+  // Initialize the auto-run slider interval variable
+  let refreshInterval;
+
+  // Function to set the slider
   const setSlider = () => {
-      let oldActive = document.querySelector('.slider .list .item.active');
-      if(oldActive) oldActive.classList.remove('active');
-      items[active].classList.add('active');
-      //
-      nextBtn.classList.remove('d-none');
-      prevBtn.classList.remove('d-none');
-      if(active == lastPosition) nextBtn.classList.add('d-none');
-      if(active == firstPosition) prevBtn.classList.add('d-none');
-  }
+    // Find the currently active item and remove the 'active' class
+    let oldActive = document.querySelector('.slider .list .item.active');
+    if (oldActive) oldActive.classList.remove('active');
+
+    // Add the 'active' class to the new active item
+    items[active].classList.add('active');
+
+    // Handle the visibility of next and previous buttons
+    nextBtn.classList.remove('d-none');
+    prevBtn.classList.remove('d-none');
+    if (active == lastPosition) nextBtn.classList.add('d-none');
+    if (active == firstPosition) prevBtn.classList.add('d-none');
+
+    // Clear the existing interval and set a new one for the slider
+    if (refreshInterval) clearInterval(refreshInterval);
+    refreshInterval = setInterval(() => {
+      next.click();
+    }, 4000);
+  };
+
+  // Initial call to set the slider
   setSlider();
 
   // set diameter
