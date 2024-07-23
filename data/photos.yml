@@ -1,44 +1,44 @@
 - name: Profile Picture
-  description: Hideki Lastname
-  image: about/profile.jpeg
-  image2: about/mobile_profile.png
+  description: Firstname Lastname
+  image: about/sample_profile1.webp
+  image2: about/sample_profile.webp
 
 - name: Portrait 1
   description: Portrait Image
-  image: portrait/portrait1.jpeg
+  image: portrait/portrait1.webp
 
 - name: Portrait 2
   description: Portrait Image
-  image: portrait/portrait2.jpeg
+  image: portrait/portrait2.webp
 
 - name: Portrait 3
   description: Portrait Image
-  image: portrait/portrait3.jpeg
+  image: portrait/portrait3.webp
 
 - name: Portrait 4
   description: Portrait Image
-  image: portrait/portrait4.jpeg
+  image: portrait/portrait4.webp
 
 - name: Portrait 5
   description: Portrait Image
-  image: portrait/portrait5.jpeg
+  image: portrait/portrait5.webp
 
 - name: Portrait 6
   description: Portrait Image
-  image: portrait/portrait6.jpeg
+  image: portrait/portrait6.webp
 
 - name: Portrait 7
   description: Portrait Image
-  image: portrait/portrait7.jpeg
+  image: portrait/portrait7.webp
 
 - name: Portrait 8
   description: Portrait Image
-  image: portrait/portrait8.jpeg
+  image: portrait/portrait8.webp
 
 - name: Portrait 9
   description: Portrait Image
-  image: portrait/portrait9.jpeg
+  image: portrait/portrait9.webp
 
 - name: Portrait 10
   description: Portrait Image
-  image: portrait/portrait10.jpeg
+  image: portrait/portrait10.webp
