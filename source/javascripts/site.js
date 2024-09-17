@@ -150,7 +150,7 @@ document.addEventListener('DOMContentLoaded', function() {
   })
 
   const updateImage = (i) => {
-      let path = `images/landscape/landscape${i-2}.jpeg`;
+      let path = `images/landscape/landscape${i-2}.webp`;
       largeImage.src = path;
       imageName.innerHTML = path;
       imageIndex.innerHTML = `0${i-2}`;
