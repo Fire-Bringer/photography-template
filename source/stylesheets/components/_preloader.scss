@@ -1,6 +1,8 @@
+/* Preloader styling */
 .pre-loader {
-  position: absolute;
+  position: fixed; /* Ensure the preloader covers the entire screen */
   top: 0;
+  left: 0;
   width: 100%;
   height: 100vh;
   background: #000;
@@ -8,6 +10,8 @@
   justify-content: center;
   align-items: center;
   color: #fff;
+  z-index: 9999; /* Make sure the preloader is on top */
+  overflow: hidden; /* Prevent scrolling while the preloader is active */
 }
 
 .content {
@@ -41,4 +45,9 @@
   .content {
     font-size: 5vw;
   }
+}
+
+/* Hide main content initially */
+.main-content {
+  display: none;
 }
