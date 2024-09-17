@@ -76,7 +76,7 @@ header{
     display: grid;
     grid-template-columns: repeat(2, 400px);
     text-align: left;
-    gap: 80px;
+    gap: 200px;
     font-size: 1.2em;
     text-transform: uppercase;
     font-family: Poppins;
@@ -97,7 +97,7 @@ header{
     display: flex;
     justify-content: start;
     align-items: end;
-    padding-bottom: 25px;
+    padding-top: 25px;
 }
 /* item default */
 .slider .list .item .image{

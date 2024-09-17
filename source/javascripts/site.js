@@ -1,4 +1,6 @@
-// Preloader animations
+window.scrollTo(0, 0); // Ensure the page loads at the top
+
+// Preloader Animations
 gsap.from(".text", 0.8, {
   y: 40,
   opacity: 0,
@@ -16,16 +18,11 @@ gsap.to(".pre-loader", 2, {
   top: "-100%",
   ease: "power4.inOut",
   delay: 4,
-  onComplete: function() {
-    // Once the preloader animation is done, reveal the main content
-    document.querySelector(".main-content").style.display = "block";
-  }
 });
 
 
 
-
-
+// Slider Animation
 document.addEventListener('DOMContentLoaded', function() {
 
   let listTab = document.querySelectorAll('.tab');
