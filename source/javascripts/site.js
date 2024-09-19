@@ -1,32 +1,60 @@
 window.scrollTo(0, 0); // Ensure the page loads at the top
-
-// Preloader Animations
-gsap.from(".text", 0.8, {
-  y: 40,
-  opacity: 0,
-  ease: "power2.inOut",
-  delay: 1,
-});
-
-gsap.from(".loader", 2, {
-  width: 0,
-  ease: "power4.inOut",
-  delay: 2,
-});
-
-gsap.to(".pre-loader", 2, {
-  top: "-100%",
-  ease: "power4.inOut",
-  delay: 4,
-});
-
-
-
-// Slider Animation
 document.addEventListener('DOMContentLoaded', function() {
 
-  let listTab = document.querySelectorAll('.tab');
+  const preloadImages = () => {
+    const images = [
+      '../images/hero/lagoon.png',
+      '../images/hero/mountain.png',
+      '../images/hero/field.png'
+    ];
 
+    let loadedImages = 0;
+    images.forEach((src) => {
+      const img = new Image();
+      img.src = src;
+      img.onload = () => {
+        loadedImages++;
+        if (loadedImages === images.length) {
+          // Initialize slider as soon as all images are loaded
+          setSlider();
+        }
+      };
+    });
+  };
+
+  // Call preloadImages
+  preloadImages();
+
+  // Preloader Animations
+  gsap.from(".text", 0.8, {
+    y: 40,
+    opacity: 0,
+    ease: "power2.inOut",
+    delay: 1,
+  });
+
+  gsap.from(".loader", 2, {
+    width: 0,
+    ease: "power4.inOut",
+    delay: 2,
+  });
+
+  // Animation for pre-loader to slide out
+  gsap.to(".pre-loader", 2, {
+    top: "-100%",
+    ease: "power4.inOut",
+    delay: 4,
+    onComplete: function() {
+      // Delay to allow content to be fully loaded
+      setTimeout(function() {
+        document.querySelector('.main-content').style.opacity = '1'; // Set opacity to 1 to make slider visible
+      }, 200); // Delay before showing main content
+    }
+  });
+
+  // Slider Animation
+
+  let listTab = document.querySelectorAll('.tab');
   let items = document.querySelectorAll('.slider .list .item');
   let prevBtn = document.getElementById('prev');
   let nextBtn = document.getElementById('next');
@@ -38,19 +66,19 @@ document.addEventListener('DOMContentLoaded', function() {
   let active = 0;
 
   nextBtn.onclick = () => {
-      active = active + 1;
-      if(active >= countItem){
-        active = 0;
-      }
-      setSlider();
-  }
+    active = active + 1;
+    if (active >= countItem) {
+      active = 0;
+    }
+    setSlider();
+  };
   prevBtn.onclick = () => {
-      active = active - 1;
-      if(active < 0){
-        active = countItem - 1;
-      }
-      setSlider();
-  }
+    active = active - 1;
+    if (active < 0) {
+      active = countItem - 1;
+    }
+    setSlider();
+  };
 
   // Initialize the auto-run slider interval variable
   let refreshInterval;
@@ -73,7 +101,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Clear the existing interval and set a new one for the slider
     if (refreshInterval) clearInterval(refreshInterval);
     refreshInterval = setInterval(() => {
-      next.click();
+      nextBtn.click();
     }, 4000);
   };
 
@@ -82,27 +110,27 @@ document.addEventListener('DOMContentLoaded', function() {
 
   // set diameter
   const setDiameter = () => {
-      let slider = document.querySelector('.slider');
-      let widthSlider = slider.offsetWidth;
-      let heightSlider = slider.offsetHeight;
-      let diameter = Math.sqrt(Math.pow(widthSlider, 2) + Math.pow(heightSlider, 2));
-      document.documentElement.style.setProperty('--diameter', diameter+'px');
-  }
+    let slider = document.querySelector('.slider');
+    let widthSlider = slider.offsetWidth;
+    let heightSlider = slider.offsetHeight;
+    let diameter = Math.sqrt(Math.pow(widthSlider, 2) + Math.pow(heightSlider, 2));
+    document.documentElement.style.setProperty('--diameter', diameter + 'px');
+  };
   setDiameter();
   window.addEventListener('resize', () => {
-      setDiameter();
-  })
+    setDiameter();
+  });
 
   window.addEventListener("scroll", (event) => {
     /*scrollY is the web scrollbar position (pixel)*/
     let top = window.scrollY;
-    listTab.forEach(tab =>{
-      if(tab.offsetTop - top < 550){
-          tab.classList.add('active');
-      }else{
-          tab.classList.remove('active');
+    listTab.forEach(tab => {
+      if (tab.offsetTop - top < 550) {
+        tab.classList.add('active');
+      } else {
+        tab.classList.remove('active');
       }
-    })
+    });
   });
 
   // Responsive Navbar
@@ -110,11 +138,10 @@ document.addEventListener('DOMContentLoaded', function() {
   const navbar = document.querySelector('.navbar');
   const navbg = document.querySelector('.nav-bg');
   menuIcon.addEventListener('click', () => {
-      menuIcon.classList.toggle('bx-x');
-      navbar.classList.toggle('active');
-      navbg.classList.toggle('active');
+    menuIcon.classList.toggle('bx-x');
+    navbar.classList.toggle('active');
+    navbg.classList.toggle('active');
   });
-
 
   // Close menu when nav-link is clicked
   const navLink = document.querySelectorAll('.nav-link');
@@ -122,9 +149,9 @@ document.addEventListener('DOMContentLoaded', function() {
   navLink.forEach(n => n.addEventListener('click', closeMenu));
 
   function closeMenu() {
-  menuIcon.classList.remove('bx-x');
-  navbar.classList.remove('active');
-  navbg.classList.remove('active');
+    menuIcon.classList.remove('bx-x');
+    navbar.classList.remove('active');
+    navbg.classList.remove('active');
   }
 
   // Popup Section
@@ -143,34 +170,34 @@ document.addEventListener('DOMContentLoaded', function() {
   let index = 0; // will track our current image;
 
   images.forEach((item, i) => {
-      item.addEventListener('click', () => {
-          updateImage(i);
-          popup.classList.toggle('active');
-      })
-  })
+    item.addEventListener('click', () => {
+      updateImage(i);
+      popup.classList.toggle('active');
+    });
+  });
 
   const updateImage = (i) => {
-      let path = `images/landscape/landscape${i-2}.webp`;
-      largeImage.src = path;
-      imageName.innerHTML = path;
-      imageIndex.innerHTML = `0${i-2}`;
-      index = i;
-  }
+    let path = `images/landscape/landscape${i - 2}.webp`;
+    largeImage.src = path;
+    imageName.innerHTML = path;
+    imageIndex.innerHTML = `0${i - 2}`;
+    index = i;
+  };
 
   closeBtn.addEventListener('click', () => {
-      popup.classList.toggle('active');
-  })
+    popup.classList.toggle('active');
+  });
 
   leftArrow.addEventListener('click', () => {
-      if(index > 0){
-          updateImage(index - 1);
-      }
-  })
+    if (index > 0) {
+      updateImage(index - 1);
+    }
+  });
 
   rightArrow.addEventListener('click', () => {
-      if(index < images.length - 1){
-          updateImage(index + 1);
-      }
-  })
+    if (index < images.length - 1) {
+      updateImage(index + 1);
+    }
+  });
 
 });
