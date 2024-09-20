@@ -1,7 +1,7 @@
 .animation-show{
   transform: translateY(100px);
   opacity: 0;
-  transition: 2s;
+  transition: 1s;
 }
 .active .animation-show{
   transform: translateY(0);
