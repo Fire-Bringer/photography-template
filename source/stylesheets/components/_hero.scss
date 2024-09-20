@@ -1,16 +1,22 @@
 @import url('https://fonts.cdnfonts.com/css/bebas-neue');
 @import url('https://fonts.cdnfonts.com/css/poppins');
 
+#hero-section{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .hero-1 {
-  --url: url('../images/hero/lagoon.png');
+  --url: url('../images/hero/mountain.webp');
   background-image: var(--url);
 }
 .hero-2 {
-  --url: url('../images/hero/mountain.png');
+  --url: url('../images/landscape/landscape3.webp');
   background-image: var(--url);
 }
 .hero-3 {
-  --url: url('../images/hero/field.png');
+  --url: url('../images/hero/lagoon.webp');
   background-image: var(--url);
 }
 
@@ -51,7 +57,7 @@ header{
 .slider{
     /* background-color: red; */
     color: #eee;
-    width: 100vw;
+    width: 98vw;
     height: 80vh;
     position: relative;
     overflow: hidden;
@@ -83,15 +89,13 @@ header{
     text-shadow: 0 0 80px #000;
 }
 .slider .list .item .content h2{
-    font-size: 10em;
-    font-family: "EB Garamond", serif;
+    font-size: 1.5em;
+    font-family: "Playwrite DE Grund";
     line-height: 0.9em;
     transform: translateY(-100%);
     transition: transform 1s;
     grid-row-start: 1;
     grid-row-end: 3;
-}
-.slider .list .item .content p{
 }
 .slider .list .item .content p:last-child{
     display: flex;
@@ -228,9 +232,6 @@ header{
     .slider .list .item .content{
         grid-template-columns: repeat(2, 300px);
     }
-    .slider .list .item .content h2{
-        font-size: 8em;
-    }
 }
 @media all and (max-width: 767px) {
     .slider .list .item .content{
@@ -238,9 +239,6 @@ header{
         justify-content: center;
         gap: 20px;
         top: 70px;
-    }
-    .slider .list .item .content h2{
-        font-size: 4em;
     }
     .slider .list .item .content p{
         font-size: small;
@@ -250,4 +248,8 @@ header{
   .slider {
     height: 70vh;
   }
+  .slider .list .item .content h2{
+    font-size: 1.2em;
+    line-height: 1.2em;
+}
 }
