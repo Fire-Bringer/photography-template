@@ -40,6 +40,9 @@
 }
 
 @media (max-width: 500px) {
+  .pre-loader {
+    top: -10%;
+  }
   .loader{
     width: 250px;
   }

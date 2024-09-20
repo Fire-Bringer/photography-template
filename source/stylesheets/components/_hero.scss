@@ -248,6 +248,10 @@ header{
   .slider {
     height: 70vh;
   }
+  .slider .list .item .content{
+    left: 35%;
+    grid-template-columns: 55%;
+}
   .slider .list .item .content h2{
     font-size: 1.2em;
     line-height: 1.2em;
