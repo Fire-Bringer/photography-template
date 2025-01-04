@@ -5,7 +5,7 @@ A landing page made for a freelance photographer in mind. Designed with simplici
 ### Features
 - A simple intro animation which reveals the hero through a fade-out animation
 - A 360 degree hero image carousel with automatic transitions 
-- A different 360 degree image carousel which automatically rotates through portrait images
+- A different 360 degree image gallery carousel which automatically rotates through portrait images
 - A landscape image gallery which reveals on scroll
 - A modal popup which zooms on each landscape image
 - A contact me section
