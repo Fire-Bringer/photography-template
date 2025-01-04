@@ -1,71 +1,41 @@
-# Middleman Template
-A simple way to build static pages with a Rails feel.
+# 📷 Avaphotography
 
-## Using
+A landing page made for a freelance photographer in mind. Designed with simplicity and darkness in mind to give more focus towards the images.  
 
-- [Middleman](https://middlemanapp.com)
-- [Sass](https://sass-lang.com)
-- [Bootstrap](https://getbootstrap.com/docs/5.0/getting-started/introduction/)
-- [FontAwesome](https://fontawesome.com/icons)
+### Features
+- A simple intro animation which reveals the hero through a fade-out animation
+- A 360 degree hero image carousel with automatic transitions 
+- A different 360 degree image carousel which automatically rotates through portrait images
+- A landscape image gallery which reveals on scroll
+- A modal popup which zooms on each landscape image
+- A contact me section
 
-## Init a new project
-1. In the repo, click on the green `Code` button to copy your SSH address
-2. In Terminal, move to your code folder (or where you want to download the new repo)
-3. Clone the repository like this
-`git clone git@github.com:dmbf29/middleman-template.git middleman-portfolio`
-4. Move into the directory `cd middleman-portfolio`
-5. Remove my git history. `rm -rf .git`
-6. Start a new git repo in that folder `git init`
-7. Create your own repo `gh repo create middleman-portfolio --public --source=.`
+### Screenshots:
 
-### Installation
-```
-gem install middleman
-bundle install
-```
-⚠️ You may run into some into some gem warnings.<br>
-Warnings == 👌, but Fatal errors == ⛔️<br>
-If you get a fatal error, you can try fixing it with `bundle update` and hope for the best 🤞
+Intro Animation
+![Photo-Intro](https://github.com/user-attachments/assets/fb1f4970-45d9-4dfa-8c94-7a9dc047d6b5)
 
-## Run a server
-- `middleman`<br>
-or if that fails, try
-- `bundle exec middleman`
+Landing Page Hero
+![Photo-Hero](https://github.com/user-attachments/assets/8432f6d5-9614-4864-adb8-2b5cafa86d51)
 
-## Deploy
-1. [Sign into Netlify](https://www.netlify.com/)
-2. Add new site -> Import an existing project -> Github
-3. Choose repository and branch
-4. Make sure your deploy settings look like this:
-<img width="400" alt="Screen Shot 2021-06-18 at 14 19 13" src="https://user-images.githubusercontent.com/25542223/122510271-49d34900-d040-11eb-853f-5105b5d48fcd.png">
-5. Website is deployed!
-6. (Add purchased domain)
+About Section
+![Photo-About](https://github.com/user-attachments/assets/7914b6d1-86e5-43a2-a046-8d8e916d2a8a)
 
-## Meta Tags
-You can copy and paste these meta tags inside your `<head></head>` and update the information.
-```
-<title><%= current_page.data.title || "NAME OF MY SITE | MY TITLE" %></title>
-<meta name="description" content="Description of my portfolio site">
-<!-- Facebook Open Graph data -->
-<meta property="og:title" content="NAME OF MY SITE | MY TITLE" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="THE_URL_OF_MY_PORTFOLIO" />
-<meta property="og:image" content="<%= image_path 'MY_OG_IMAGE_WITH_RIGHT_SIZE.png' %>" />
-<meta property="og:description" content="Description of my portfolio site" />
-<meta property="og:site_name" content="NAME OF MY SITE | MY TITLE" />
-<!-- Twitter Card data -->
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:site" content="@twitter_handle">
-<meta name="twitter:title" content="NAME OF MY SITE | MY TITLE">
-<meta name="twitter:description" content="Description of my portfolio site">
-<meta name="twitter:creator" content="@twitter_handle">
-<meta name="twitter:image:src" content="<%= image_path 'MY_OG_IMAGE_WITH_RIGHT_SIZE.png' %>">
-```
+Portrait Gallery
+![Photo-Portrait](https://github.com/user-attachments/assets/bec7ffe4-bdd0-4c8e-aa4b-615ed91d361d)
 
-## Contributing
+Landscape Gallery
+![Photo-Landscape](https://github.com/user-attachments/assets/dd157cc6-7d8c-4d04-97c2-e7363147389f)
 
-1. Fork it
-2. Create your feature branch (`git checkout -b my-new-feature`)
-3. Commit your changes (`git commit -am 'Add some feature'`)
-4. Push to the branch (`git push origin my-new-feature`)
-5. Create a new Pull Request
+Contact Section
+![Photo-Contact](https://github.com/user-attachments/assets/9032fbe2-09d8-4678-a603-177a004b8935)
+
+
+Project Page: https://avaphotography.netlify.app/
+
+
+## Built With
+- [Middleman](https://middlemanapp.com/) - Backend / Front-end
+
+## Designer / Developer
+- [Rashad Dupaty](https://www.linkedin.com/in/rashaddupaty/)
