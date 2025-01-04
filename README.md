@@ -37,6 +37,7 @@ Project Page: https://avaphotography.netlify.app/
 ## Built With
 - [Middleman](https://middlemanapp.com/) - Backend / Front-end
 - [GSAP](https://gsap.com/) - JavaScript Animations
+- [Photoshop](https://www.adobe.com/products/photoshop.html) - Image Prep
 
 ## Designer / Developer
 - [Rashad Dupaty](https://www.linkedin.com/in/rashaddupaty/)
